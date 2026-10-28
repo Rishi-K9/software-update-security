@@ -1,0 +1,25 @@
+
+# Sample Patch Management Policy
+# Demonstration only - not an active deployment configuration
+
+patch_management:
+  enabled: true
+
+  systems:
+    - operating_systems
+    - applications
+    - firmware
+
+  assessment:
+    check_for_updates: regularly
+    prioritize_critical_patches: true
+
+  deployment:
+    test_before_installation: true
+    backup_before_changes: true
+    verify_after_installation: true
+
+  rollback:
+    required: true
+    restore_previous_configuration: true
+    document_results: true
